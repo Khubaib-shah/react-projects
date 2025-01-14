@@ -1,4 +1,3 @@
-import React from "react";
 import CartButton from "./CartButton";
 
 const CartItem = ({ item }) => {
@@ -9,7 +8,7 @@ const CartItem = ({ item }) => {
       className="group flex flex-col gap-y-2 relative border border-zinc-200 rounded-md bg-white p-24 "
     >
       <img
-        src={item.imageUrl}
+        src={imageUrl}
         alt="Product Image"
         width={300}
         height={300}
@@ -19,7 +18,7 @@ const CartItem = ({ item }) => {
         <h1 className="text-zinc-700 text-sm">{name}</h1>
         <span className="text-pink-700 text-sm">${price}</span>
       </div>
-      <CartButton />
+      <CartButton item={item} />
     </div>
   );
 };
