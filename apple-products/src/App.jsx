@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import Controls from "./components/Controls";
 
 const App = () => {
-  return <h1 class="text-3xl font-bold underline">Hello world!</h1>;
+  const [frameZoom, setFrameZoom] = useState(false);
+  const toggleZoom = () => {
+    setFrameZoom(!frameZoom);
+  };
+  return (
+    <div className="w-full h-screen grid place-items-center">
+      <div
+        className={`${
+          frameZoom && "w-[97vw] h-[97vh]"
+        } w-[70vw] h-[85vh] min-w-[70vw] min-h-[85vh] max-w-[90vw] max-h-[90vh] border border-gray-300 resize overflow-auto rounded-2xl relative transition-all duration-100`}
+      >
+        <Controls toggleZoom={toggleZoom} frameZoom={frameZoom} />
+      </div>
+    </div>
+  );
 };
 
 export default App;
