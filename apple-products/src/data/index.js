@@ -52,4 +52,48 @@ const navBottomLinks = [
     icon: "bx bxl-youtube",
   },
 ];
-export { navItems, navBottomLinks };
+const items = [
+  {
+    label: "iPhone",
+    img: "images/iphone.jpg",
+    pageIndex: 1,
+  },
+  {
+    label: "MacBook",
+    img: "images/macbook.jpg",
+    pageIndex: 2,
+  },
+  {
+    label: "Smart Watch",
+    img: "images/watch.jpg",
+    pageIndex: 3,
+  },
+  {
+    label: "iMac",
+    img: "images/imac.png",
+    pageIndex: 4,
+  },
+];
+
+const iPhoneModel = [
+  {
+    name: "iPhone 16",
+    description: "A Amazing as Sever",
+    price: "from $799",
+    img: "images/iphone16.png",
+  },
+  {
+    name: "iPhone 16 Pro",
+    description: "A total powerhouse.",
+    price: "from $999",
+    img: "images/iphone16-plus.png",
+  },
+  {
+    name: "iPhone 16 Pro Max",
+    description: "The ultimate iPhone.",
+    price: "from $1099",
+    img: "images/iphone16-pro-max.png",
+  },
+];
+
+export { navItems, navBottomLinks, items, iPhoneModel };
